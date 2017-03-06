@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		090996671E5E23EB00207897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090996661E5E23EB00207897 /* AppDelegate.swift */; };
-		090996691E5E23EB00207897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090996681E5E23EB00207897 /* ViewController.swift */; };
+		090996691E5E23EB00207897 /* BMPosicionActualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090996681E5E23EB00207897 /* BMPosicionActualViewController.swift */; };
 		0909966C1E5E23EB00207897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909966A1E5E23EB00207897 /* Main.storyboard */; };
 		0909966E1E5E23EB00207897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0909966D1E5E23EB00207897 /* Assets.xcassets */; };
 		090996711E5E23EB00207897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909966F1E5E23EB00207897 /* LaunchScreen.storyboard */; };
+		0995A1621E64A9BF00632D87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995A1611E64A9BF00632D87 /* SWRevealViewController.m */; };
+		0995A1661E64AF0600632D87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0995A1651E64AF0600632D87 /* MapKit.framework */; };
+		09A958221E6DDAAD00D96FAC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 09A958211E6DDAAD00D96FAC /* Podfile */; };
+		09A958241E6DDE6200D96FAC /* API_UTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A958231E6DDE6200D96FAC /* API_UTILS.swift */; };
+		3476B1FD3591F7F6BB162C75 /* Pods_FJC_BaresMadrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1CA74F26D1FD2F4C8135A3 /* Pods_FJC_BaresMadrid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		090996631E5E23EB00207897 /* FJC_BaresMadrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJC_BaresMadrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090996661E5E23EB00207897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		090996681E5E23EB00207897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		090996681E5E23EB00207897 /* BMPosicionActualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPosicionActualViewController.swift; sourceTree = "<group>"; };
 		0909966B1E5E23EB00207897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0909966D1E5E23EB00207897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090996701E5E23EB00207897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090996721E5E23EB00207897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0995A15F1E64A9BF00632D87 /* FJC_BaresMadrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FJC_BaresMadrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		0995A1601E64A9BF00632D87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		0995A1611E64A9BF00632D87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0995A1651E64AF0600632D87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09A958211E6DDAAD00D96FAC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		09A958231E6DDE6200D96FAC /* API_UTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API_UTILS.swift; sourceTree = "<group>"; };
+		694CBF884C4D07D6DAA91850 /* Pods-FJC_BaresMadrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FJC_BaresMadrid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FJC_BaresMadrid/Pods-FJC_BaresMadrid.debug.xcconfig"; sourceTree = "<group>"; };
+		84654290E5B85433959C0D77 /* Pods-FJC_BaresMadrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FJC_BaresMadrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-FJC_BaresMadrid/Pods-FJC_BaresMadrid.release.xcconfig"; sourceTree = "<group>"; };
+		EC1CA74F26D1FD2F4C8135A3 /* Pods_FJC_BaresMadrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FJC_BaresMadrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0995A1661E64AF0600632D87 /* MapKit.framework in Frameworks */,
+				3476B1FD3591F7F6BB162C75 /* Pods_FJC_BaresMadrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +54,12 @@
 		0909965A1E5E23EB00207897 = {
 			isa = PBXGroup;
 			children = (
+				09A958231E6DDE6200D96FAC /* API_UTILS.swift */,
+				09A958211E6DDAAD00D96FAC /* Podfile */,
 				090996651E5E23EB00207897 /* FJC_BaresMadrid */,
 				090996641E5E23EB00207897 /* Products */,
+				0995A1641E64AF0600632D87 /* Frameworks */,
+				319B2DA6D9FFD473F633FECE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +75,42 @@
 			isa = PBXGroup;
 			children = (
 				090996661E5E23EB00207897 /* AppDelegate.swift */,
-				090996681E5E23EB00207897 /* ViewController.swift */,
+				0995A1631E64AA6A00632D87 /* OBJ-C */,
+				090996681E5E23EB00207897 /* BMPosicionActualViewController.swift */,
 				0909966A1E5E23EB00207897 /* Main.storyboard */,
 				0909966D1E5E23EB00207897 /* Assets.xcassets */,
 				0909966F1E5E23EB00207897 /* LaunchScreen.storyboard */,
 				090996721E5E23EB00207897 /* Info.plist */,
 			);
 			path = FJC_BaresMadrid;
+			sourceTree = "<group>";
+		};
+		0995A1631E64AA6A00632D87 /* OBJ-C */ = {
+			isa = PBXGroup;
+			children = (
+				0995A1601E64A9BF00632D87 /* SWRevealViewController.h */,
+				0995A1611E64A9BF00632D87 /* SWRevealViewController.m */,
+				0995A15F1E64A9BF00632D87 /* FJC_BaresMadrid-Bridging-Header.h */,
+			);
+			name = "OBJ-C";
+			sourceTree = "<group>";
+		};
+		0995A1641E64AF0600632D87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0995A1651E64AF0600632D87 /* MapKit.framework */,
+				EC1CA74F26D1FD2F4C8135A3 /* Pods_FJC_BaresMadrid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		319B2DA6D9FFD473F633FECE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				694CBF884C4D07D6DAA91850 /* Pods-FJC_BaresMadrid.debug.xcconfig */,
+				84654290E5B85433959C0D77 /* Pods-FJC_BaresMadrid.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 090996751E5E23EB00207897 /* Build configuration list for PBXNativeTarget "FJC_BaresMadrid" */;
 			buildPhases = (
+				4D92FD2415AF7F531563F2D9 /* [CP] Check Pods Manifest.lock */,
 				0909965F1E5E23EB00207897 /* Sources */,
 				090996601E5E23EB00207897 /* Frameworks */,
 				090996611E5E23EB00207897 /* Resources */,
+				5A6934EB767BADED12EE5B25 /* [CP] Embed Pods Frameworks */,
+				09BF5A423B1159678D90475D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +148,7 @@
 				TargetAttributes = {
 					090996621E5E23EB00207897 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,19 +178,70 @@
 			files = (
 				090996711E5E23EB00207897 /* LaunchScreen.storyboard in Resources */,
 				0909966E1E5E23EB00207897 /* Assets.xcassets in Resources */,
+				09A958221E6DDAAD00D96FAC /* Podfile in Resources */,
 				0909966C1E5E23EB00207897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09BF5A423B1159678D90475D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FJC_BaresMadrid/Pods-FJC_BaresMadrid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D92FD2415AF7F531563F2D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A6934EB767BADED12EE5B25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FJC_BaresMadrid/Pods-FJC_BaresMadrid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0909965F1E5E23EB00207897 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090996691E5E23EB00207897 /* ViewController.swift in Sources */,
+				09A958241E6DDE6200D96FAC /* API_UTILS.swift in Sources */,
+				090996691E5E23EB00207897 /* BMPosicionActualViewController.swift in Sources */,
 				090996671E5E23EB00207897 /* AppDelegate.swift in Sources */,
+				0995A1621E64A9BF00632D87 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,24 +360,31 @@
 		};
 		090996761E5E23EB00207897 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 694CBF884C4D07D6DAA91850 /* Pods-FJC_BaresMadrid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FJC_BaresMadrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FJC-BaresMadrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FJC_BaresMadrid/FJC_BaresMadrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		090996771E5E23EB00207897 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84654290E5B85433959C0D77 /* Pods-FJC_BaresMadrid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FJC_BaresMadrid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FJC-BaresMadrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FJC_BaresMadrid/FJC_BaresMadrid-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -297,6 +408,7 @@
 				090996771E5E23EB00207897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
