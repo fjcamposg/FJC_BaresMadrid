@@ -8,6 +8,8 @@
 
 import Foundation
 
+let CONSTANTES = Constantes()
+
 struct Constantes {
     let COLORES = Colores()
     let CONEXIONES_URL = Baseurl()
@@ -22,5 +24,5 @@ struct Colores {
 
 struct Baseurl{
     let BASE_URL_NOTICIAS = "https://jsonplaceholder.typicode.com/photos"
-    let BASE_URL_IMDB = ""
+    let BASE_URL_IMDB = "http://www.omdbapi.com/?s=Batman&page="
 }
