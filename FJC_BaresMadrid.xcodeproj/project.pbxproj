@@ -12,6 +12,10 @@
 		0909966C1E5E23EB00207897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909966A1E5E23EB00207897 /* Main.storyboard */; };
 		0909966E1E5E23EB00207897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0909966D1E5E23EB00207897 /* Assets.xcassets */; };
 		090996711E5E23EB00207897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909966F1E5E23EB00207897 /* LaunchScreen.storyboard */; };
+		0922016C1E7080B700944938 /* BMParserOmDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922016B1E7080B700944938 /* BMParserOmDb.swift */; };
+		0922016E1E70864600944938 /* BMOmdbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922016D1E70864600944938 /* BMOmdbTableViewController.swift */; };
+		092201711E70866D00944938 /* BMPosterCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0922016F1E70866D00944938 /* BMPosterCustomCell.swift */; };
+		092201721E70866D00944938 /* BMPosterCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092201701E70866D00944938 /* BMPosterCustomCell.xib */; };
 		0995A1621E64A9BF00632D87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995A1611E64A9BF00632D87 /* SWRevealViewController.m */; };
 		0995A1661E64AF0600632D87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0995A1651E64AF0600632D87 /* MapKit.framework */; };
 		09A958221E6DDAAD00D96FAC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 09A958211E6DDAAD00D96FAC /* Podfile */; };
@@ -39,6 +43,10 @@
 		0909966D1E5E23EB00207897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090996701E5E23EB00207897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090996721E5E23EB00207897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0922016B1E7080B700944938 /* BMParserOmDb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMParserOmDb.swift; sourceTree = "<group>"; };
+		0922016D1E70864600944938 /* BMOmdbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOmdbTableViewController.swift; sourceTree = "<group>"; };
+		0922016F1E70866D00944938 /* BMPosterCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPosterCustomCell.swift; sourceTree = "<group>"; };
+		092201701E70866D00944938 /* BMPosterCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPosterCustomCell.xib; sourceTree = "<group>"; };
 		0995A15F1E64A9BF00632D87 /* FJC_BaresMadrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FJC_BaresMadrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		0995A1601E64A9BF00632D87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0995A1611E64A9BF00632D87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -115,6 +123,16 @@
 			path = FJC_BaresMadrid;
 			sourceTree = "<group>";
 		};
+		092201731E70867600944938 /* JSON_POSTERS */ = {
+			isa = PBXGroup;
+			children = (
+				0922016D1E70864600944938 /* BMOmdbTableViewController.swift */,
+				0922016F1E70866D00944938 /* BMPosterCustomCell.swift */,
+				092201701E70866D00944938 /* BMPosterCustomCell.xib */,
+			);
+			name = JSON_POSTERS;
+			sourceTree = "<group>";
+		};
 		0995A1631E64AA6A00632D87 /* OBJ-C */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				09A958321E6DE7C600D96FAC /* BMParserNoticias.swift */,
+				0922016B1E7080B700944938 /* BMParserOmDb.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -170,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				090996681E5E23EB00207897 /* BMPosicionActualViewController.swift */,
+				092201731E70867600944938 /* JSON_POSTERS */,
 				09A9583F1E6DF3A400D96FAC /* JSON_NOTICIAS */,
 			);
 			name = VIEWS_CONTROLLERS;
@@ -261,6 +281,7 @@
 				090996711E5E23EB00207897 /* LaunchScreen.storyboard in Resources */,
 				0909966E1E5E23EB00207897 /* Assets.xcassets in Resources */,
 				09A958221E6DDAAD00D96FAC /* Podfile in Resources */,
+				092201721E70866D00944938 /* BMPosterCustomCell.xib in Resources */,
 				0909966C1E5E23EB00207897 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +348,11 @@
 				09A958241E6DDE6200D96FAC /* API_UTILS.swift in Sources */,
 				090996691E5E23EB00207897 /* BMPosicionActualViewController.swift in Sources */,
 				09A958331E6DE7C600D96FAC /* BMParserNoticias.swift in Sources */,
+				0922016C1E7080B700944938 /* BMParserOmDb.swift in Sources */,
 				090996671E5E23EB00207897 /* AppDelegate.swift in Sources */,
 				0995A1621E64A9BF00632D87 /* SWRevealViewController.m in Sources */,
+				092201711E70866D00944938 /* BMPosterCustomCell.swift in Sources */,
+				0922016E1E70864600944938 /* BMOmdbTableViewController.swift in Sources */,
 				09A958411E6E026700D96FAC /* BMlmdbModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
