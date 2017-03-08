@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,6 +26,10 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-lM-FZw">
                                 <rect key="frame" x="150" y="543" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="cec-84-hqq"/>
+                                    <constraint firstAttribute="width" constant="75" id="oka-B6-GhV"/>
+                                </constraints>
                                 <state key="normal" image="btn_localizar_on"/>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oeR-Uw-vqR">
@@ -35,17 +38,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oeR-Uw-vqR" firstAttribute="centerX" secondItem="Yz4-lM-FZw" secondAttribute="centerX" id="0ga-PF-4uf"/>
-                            <constraint firstItem="XWU-vK-WR8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5p0-x1-sUG"/>
-                            <constraint firstItem="XWU-vK-WR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9kE-bT-o6u"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yz4-lM-FZw" secondAttribute="bottom" constant="49" id="9wA-da-xdj"/>
-                            <constraint firstItem="Yz4-lM-FZw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="T0Q-EU-grg"/>
-                            <constraint firstItem="Yz4-lM-FZw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVB-zU-3z0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Yz4-lM-FZw" secondAttribute="trailing" constant="134" id="lTH-o3-YCl"/>
-                            <constraint firstItem="oeR-Uw-vqR" firstAttribute="centerY" secondItem="Yz4-lM-FZw" secondAttribute="centerY" id="pyU-N2-Jmu"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yz4-lM-FZw" secondAttribute="bottom" constant="49" id="qBV-5Z-VPj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XWU-vK-WR8" secondAttribute="bottom" id="qZx-We-EkQ"/>
-                            <constraint firstAttribute="trailing" secondItem="XWU-vK-WR8" secondAttribute="trailing" id="tdb-kU-aqM"/>
+                            <constraint firstItem="XWU-vK-WR8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2Ka-Mw-lBs"/>
+                            <constraint firstAttribute="trailing" secondItem="XWU-vK-WR8" secondAttribute="trailing" id="2sT-YY-l3N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XWU-vK-WR8" secondAttribute="bottom" id="4xE-kI-x7s"/>
+                            <constraint firstItem="Yz4-lM-FZw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZXR-TK-n5o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yz4-lM-FZw" secondAttribute="bottom" constant="49" id="leM-5Y-FwS"/>
+                            <constraint firstItem="oeR-Uw-vqR" firstAttribute="centerX" secondItem="Yz4-lM-FZw" secondAttribute="centerX" id="wwE-Tm-bzl"/>
+                            <constraint firstItem="oeR-Uw-vqR" firstAttribute="centerY" secondItem="Yz4-lM-FZw" secondAttribute="centerY" id="xrG-hK-0KY"/>
+                            <constraint firstItem="XWU-vK-WR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xvk-7U-SWe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bVs-ja-Zm3">
@@ -310,7 +310,7 @@
                                                     <rect key="frame" x="33" y="0.0" width="47" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comentarios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZd-vk-aSV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muestra los bares de Madrid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZd-vk-aSV">
                                                     <rect key="frame" x="89" y="11" width="196" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -319,6 +319,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xLm-4Y-SN8" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gdN-h4-DXD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Dsm-b9-OQp">
                                         <rect key="frame" x="0.0" y="173" width="375" height="44"/>
@@ -552,4 +555,7 @@
         <image name="menu" width="22" height="22"/>
         <image name="photo" width="1024" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gdN-h4-DXD"/>
+    </inferredMetricsTieBreakers>
 </document>

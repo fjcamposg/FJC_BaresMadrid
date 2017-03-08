@@ -47,6 +47,7 @@
 		0922016D1E70864600944938 /* BMOmdbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMOmdbTableViewController.swift; sourceTree = "<group>"; };
 		0922016F1E70866D00944938 /* BMPosterCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMPosterCustomCell.swift; sourceTree = "<group>"; };
 		092201701E70866D00944938 /* BMPosterCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPosterCustomCell.xib; sourceTree = "<group>"; };
+		092201741E709E4000944938 /* TeoriaNSCoding.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TeoriaNSCoding.playground; sourceTree = "<group>"; };
 		0995A15F1E64A9BF00632D87 /* FJC_BaresMadrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FJC_BaresMadrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		0995A1601E64A9BF00632D87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0995A1611E64A9BF00632D87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				090996661E5E23EB00207897 /* AppDelegate.swift */,
+				092201741E709E4000944938 /* TeoriaNSCoding.playground */,
 				09A958371E6DEB1200D96FAC /* MODELOS_DE_DATOS */,
 				0995A1631E64AA6A00632D87 /* OBJ-C */,
 				09A958381E6DF34500D96FAC /* VIEWS_CONTROLLERS */,

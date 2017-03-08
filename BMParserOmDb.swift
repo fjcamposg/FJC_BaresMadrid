@@ -20,7 +20,7 @@ class BMParserOmDb: NSObject {
     /// - returns: La promise de un JSON -> implememta pods de PromiseKit / Alamofire / SwiftyJSON
     
     func getDatosOmDb(_ idNumero : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string: CONSTANTES.CONEXIONES_URL.BASE_URL_OMDB + idNumero)!)
+        let request = URLRequest(url: URL(string: CONSTANTES.CONEXIONES_URL.BASE_URL_OMDB  + idNumero)!)
         return Alamofire.request(request).responseJSON().then{(data)->JSON in
             self.jsonDataOmDb = JSON(data)
             print(self.jsonDataOmDb!)
