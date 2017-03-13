@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XWU-vK-WR8">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XWU-vK-WR8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-lM-FZw">
@@ -31,6 +31,9 @@
                                     <constraint firstAttribute="width" constant="75" id="oka-B6-GhV"/>
                                 </constraints>
                                 <state key="normal" image="btn_localizar_on"/>
+                                <connections>
+                                    <action selector="ontenerLocalizacion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mcb-E2-uP2"/>
+                                </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oeR-Uw-vqR">
                                 <rect key="frame" x="177" y="570" width="20" height="20"/>
@@ -52,22 +55,26 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="PfW-D5-VT4"/>
                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="AwJ-lP-2Dc">
                             <connections>
-                                <segue destination="qCb-uJ-IvV" kind="modal" id="GR0-v7-zz7"/>
+                                <segue destination="qCb-uJ-IvV" kind="modal" identifier="tagBaresMadrid" id="GR0-v7-zz7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buscarmapa" destination="Yz4-lM-FZw" id="rUp-Fq-6GB"/>
                         <outlet property="menuButtom" destination="PfW-D5-VT4" id="5PF-iJ-fbM"/>
+                        <outlet property="miActivityIndicator" destination="oeR-Uw-vqR" id="6ra-FJ-nIU"/>
+                        <outlet property="miAddBoton" destination="AwJ-lP-2Dc" id="ADC-ea-Uwz"/>
+                        <outlet property="miMapView" destination="XWU-vK-WR8" id="OL0-Ve-Gzh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="42.728635682158924"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle Bar View Controller-->
         <scene sceneID="uQx-JV-m0s">
             <objects>
-                <viewController id="nPj-eC-f8m" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalleBarViewController" id="nPj-eC-f8m" customClass="BMDetalleBarViewController" customModule="FJC_BaresMadrid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5AF-tT-IKP"/>
                         <viewControllerLayoutGuide type="bottom" id="emo-eT-GTa"/>
@@ -173,9 +180,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Osq-qe-EMo">
-                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="dj9-bL-lxT"/>
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="8Pu-ar-gU8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="dj9-bL-lxT">
+                            <connections>
+                                <action selector="cerrarVC:" destination="nPj-eC-f8m" id="FlR-YK-9qp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Salvar" id="8Pu-ar-gU8">
+                            <connections>
+                                <action selector="salvarFotografia:" destination="nPj-eC-f8m" id="hmq-ei-OHm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="miDireccion" destination="FRC-J3-1kx" id="fGD-be-YGv"/>
+                        <outlet property="miImageViewPicker" destination="22x-k8-2gg" id="CZM-86-SAx"/>
+                        <outlet property="miLatitud" destination="S4m-AD-csI" id="Tii-hf-79x"/>
+                        <outlet property="miLongitud" destination="mlM-ZT-8ec" id="VSi-RK-VbM"/>
+                        <outlet property="miSalvardatosBTN" destination="8Pu-ar-gU8" id="LEd-x9-Dom"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcb-z5-DLb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,7 +239,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wOj-cG-5AH" id="6j1-Or-TCP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -413,7 +435,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJL-ir-Ws3" id="pJd-50-G1M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -503,7 +525,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MA4-4E-981" id="5qY-w7-flU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

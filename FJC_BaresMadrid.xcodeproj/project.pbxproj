@@ -18,6 +18,8 @@
 		092201721E70866D00944938 /* BMPosterCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092201701E70866D00944938 /* BMPosterCustomCell.xib */; };
 		0995A1621E64A9BF00632D87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0995A1611E64A9BF00632D87 /* SWRevealViewController.m */; };
 		0995A1661E64AF0600632D87 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0995A1651E64AF0600632D87 /* MapKit.framework */; };
+		09A46C561E77177000A7C15F /* BMBaresModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C551E77177000A7C15F /* BMBaresModel.swift */; };
+		09A46C591E772D0800A7C15F /* BMDetalleBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A46C581E772D0800A7C15F /* BMDetalleBarViewController.swift */; };
 		09A958221E6DDAAD00D96FAC /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 09A958211E6DDAAD00D96FAC /* Podfile */; };
 		09A958241E6DDE6200D96FAC /* API_UTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A958231E6DDE6200D96FAC /* API_UTILS.swift */; };
 		09A958261E6DE36900D96FAC /* API_AYUDAS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A958251E6DE36900D96FAC /* API_AYUDAS.swift */; };
@@ -52,6 +54,8 @@
 		0995A1601E64A9BF00632D87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0995A1611E64A9BF00632D87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0995A1651E64AF0600632D87 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		09A46C551E77177000A7C15F /* BMBaresModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMBaresModel.swift; sourceTree = "<group>"; };
+		09A46C581E772D0800A7C15F /* BMDetalleBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMDetalleBarViewController.swift; sourceTree = "<group>"; };
 		09A958211E6DDAAD00D96FAC /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		09A958231E6DDE6200D96FAC /* API_UTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API_UTILS.swift; sourceTree = "<group>"; };
 		09A958251E6DE36900D96FAC /* API_AYUDAS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API_AYUDAS.swift; sourceTree = "<group>"; };
@@ -159,6 +163,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		09A46C571E772CE000A7C15F /* VIEW_CONTROLLERS_BM */ = {
+			isa = PBXGroup;
+			children = (
+				09A46C581E772D0800A7C15F /* BMDetalleBarViewController.swift */,
+			);
+			name = VIEW_CONTROLLERS_BM;
+			sourceTree = "<group>";
+		};
 		09A958311E6DE78100D96FAC /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,7 @@
 			children = (
 				09A958351E6DEA5C00D96FAC /* BMNoticiasModel.swift */,
 				09A958401E6E026700D96FAC /* BMlmdbModel.swift */,
+				09A46C551E77177000A7C15F /* BMBaresModel.swift */,
 			);
 			name = MODELOS_DE_DATOS;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		09A958381E6DF34500D96FAC /* VIEWS_CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				09A46C571E772CE000A7C15F /* VIEW_CONTROLLERS_BM */,
 				090996681E5E23EB00207897 /* BMPosicionActualViewController.swift */,
 				092201731E70867600944938 /* JSON_POSTERS */,
 				09A9583F1E6DF3A400D96FAC /* JSON_NOTICIAS */,
@@ -347,6 +361,8 @@
 				09A9583D1E6DF39B00D96FAC /* BMNoticiaCustomCell.swift in Sources */,
 				09A958361E6DEA5C00D96FAC /* BMNoticiasModel.swift in Sources */,
 				09A958261E6DE36900D96FAC /* API_AYUDAS.swift in Sources */,
+				09A46C561E77177000A7C15F /* BMBaresModel.swift in Sources */,
+				09A46C591E772D0800A7C15F /* BMDetalleBarViewController.swift in Sources */,
 				09A958241E6DDE6200D96FAC /* API_UTILS.swift in Sources */,
 				090996691E5E23EB00207897 /* BMPosicionActualViewController.swift in Sources */,
 				09A958331E6DE7C600D96FAC /* BMParserNoticias.swift in Sources */,

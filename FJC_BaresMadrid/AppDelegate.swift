@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+         // Override point for customization after application launch.
+        
+        personalizacionUI()
         return true
     }
 
@@ -41,6 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    //MARK: - Utils
+    
+    func personalizacionUI() {
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = CONSTANTES.COLORES.AZUL_BARRA_NAV
+        navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_BARRA_NAV
+        navBar.titleTextAttributes = [NSForegroundColorAttributeName: CONSTANTES.COLORES.BLANCO_TEXTO_BARRA_NAV]
+        
+    }
+    
 }
 
