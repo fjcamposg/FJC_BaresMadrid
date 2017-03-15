@@ -15,6 +15,8 @@ class BMPosicionActualViewController: UIViewController {
     //MARK: -vbles. locales
     var baresMadrid : BMBaresModel?
     let locationManager = CLLocationManager()
+    var calloutImagenSeleccionada : UIImage?
+    
     var actualizandoLocalizacion = false {
         didSet{
             if actualizandoLocalizacion{
@@ -27,6 +29,7 @@ class BMPosicionActualViewController: UIViewController {
                 self.miActivityIndicator.isHidden = true
                 self.miActivityIndicator.stopAnimating()
                 self.buscarmapa.isUserInteractionEnabled = true
+                self.miAddBoton.isEnabled = false
             }
         }
     }
@@ -50,6 +53,17 @@ class BMPosicionActualViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+      
+        
+        
+        
+        // Fase 1 -> SINGLETON
+        APIManagerData.shared.cargarDatos()
+        
+        
+        
         
         actualizandoLocalizacion = false
         
@@ -78,6 +92,13 @@ class BMPosicionActualViewController: UIViewController {
         
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        miMapView.delegate = self
+        miMapView.addAnnotations(APIManagerData.shared.baresMadrid)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -118,6 +139,12 @@ class BMPosicionActualViewController: UIViewController {
             detalleVC.bmDelegate = self
             
             
+            
+        }
+        if segue.identifier == "showPinImage"{
+            let navVC = segue.destination as! UINavigationController
+            let detalleImVC = navVC.topViewController as! BMImagenViewController
+            detalleImVC.calloutIm = calloutImagenSeleccionada
             
         }
     }
@@ -188,6 +215,70 @@ extension BMPosicionActualViewController : CLLocationManagerDelegate{
 
 extension BMPosicionActualViewController : BMDetalleBarViewControllerDelegate {
     func bmBaresEtiquetados(_ detalleVC: BMDetalleBarViewController, barEtiquetado: BMBaresModel) {
-        // Code
+        // FASE 2 Singleton
+        APIManagerData.shared.baresMadrid.append(barEtiquetado)
+        APIManagerData.shared.salvarDatos()
+        
     }
+}
+
+// MARK: -MKMAPVIEWDELEGATE
+extension BMPosicionActualViewController : MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation{
+            return nil
+        }
+        
+        // como en las celdas de las tablas, se reaprovecha las veces necearias
+        var annotationView = miMapView.dequeueReusableAnnotationView(withIdentifier: "barpin")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "barpin")
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        //3 Vamos a configurar la anotacion
+        if let place = annotation as? BMBaresModel{
+            //hacemos referencia a las piezas del objeto
+            let imageName = place.imagenBares
+            //comprobamos imagen
+            if let imagenUrl = APIManagerData.shared.imagenesUrl(){
+                do{
+                    let imageData = try Data(contentsOf: imagenUrl.appendingPathComponent(imageName!))
+                    self.calloutImagenSeleccionada = UIImage(data: imageData)
+                    let myImageFromDDBB = resizeImage(calloutImagenSeleccionada!, newWidth: 40.0)
+                    let btnImageView = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+                    btnImageView.setImage(myImageFromDDBB, for: .normal)
+                    annotationView?.leftCalloutAccessoryView = btnImageView
+                    annotationView?.image = #imageLiteral(resourceName: "img_pin")
+                    annotationView?.canShowCallout = true
+                }catch let error{
+                    print ("Error en la configuracion de la imagen \(error.localizedDescription)")
+                }
+            }
+        }
+        return annotationView
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.leftCalloutAccessoryView{
+            performSegue(withIdentifier: "showPinImage", sender: view)
+            
+        }
+    }
+    
+    
+    //MARK: - Util
+    
+    func resizeImage(_ imagen : UIImage, newWidth : CGFloat) -> UIImage{
+        let scale = newWidth / imagen.size.width
+        let newHeight = imagen.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        imagen.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+    
 }

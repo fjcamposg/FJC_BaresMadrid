@@ -52,7 +52,30 @@ class BMDetalleBarViewController: UIViewController {
     
     
     @IBAction func salvarFotografia(_ sender: Any) {
+        // FASE 3 -> Singleton
         
+        if let imagenDes = miImageViewPicker.image{
+            // random para el nomnre de la imagen
+            let randomNameImage = UUID().uuidString.appending(".png")
+            // Obtenemos la ruta url y ademas la imagen
+            if let customUrl = APIManagerData.shared.imagenesUrl()?.appendingPathComponent(randomNameImage), let imageData = UIImagePNGRepresentation(imagenDes){
+                do{
+                    try imageData.write(to: customUrl)
+                } catch let error{
+                    print("Error salvando datos: \(error.localizedDescription)")
+                }
+            }
+            
+            // Creamos el objeto
+            detallebarMadrid = BMBaresModel(pDireccionBares: miDireccion.text!, pLatitudBares: Double(miLatitud.text!)!, pLongitudBares: Double(miLongitud.text!)!, pImagenesBares: randomNameImage)
+            
+            // Comprobamos que existe
+            if let infoBares = detallebarMadrid{
+                bmDelegate?.bmBaresEtiquetados(self, barEtiquetado: infoBares)
+            }
+            
+        }
+            dismiss(animated: true, completion: nil)
     }
     
     

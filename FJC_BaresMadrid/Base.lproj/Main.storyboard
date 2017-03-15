@@ -9,6 +9,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Imagen View Controller-->
+        <scene sceneID="uOM-NR-aNG">
+            <objects>
+                <viewController id="Snn-A6-VY1" customClass="BMImagenViewController" customModule="FJC_BaresMadrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0wB-D2-rPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z85-iD-qIS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o9K-Uj-v0y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmR-Ik-49z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xmR-Ik-49z" firstAttribute="leading" secondItem="o9K-Uj-v0y" secondAttribute="leading" id="4IN-GH-NMO"/>
+                            <constraint firstItem="xmR-Ik-49z" firstAttribute="top" secondItem="0wB-D2-rPZ" secondAttribute="bottom" id="HBT-Gk-jsh"/>
+                            <constraint firstItem="Z85-iD-qIS" firstAttribute="top" secondItem="xmR-Ik-49z" secondAttribute="bottom" id="dcc-V3-mPd"/>
+                            <constraint firstAttribute="trailing" secondItem="xmR-Ik-49z" secondAttribute="trailing" id="kVt-iF-huG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e5N-iz-e80">
+                        <barButtonItem key="leftBarButtonItem" title="Cerrar" id="ye4-P1-Ir0">
+                            <connections>
+                                <action selector="hideVC:" destination="Snn-A6-VY1" id="O9r-20-gq1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="miImagenBarMadrid" destination="xmR-Ik-49z" id="kcw-GR-wzU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMl-I0-sKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="-617.54122938530736"/>
+        </scene>
         <!--Posicion Actual View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -65,6 +104,7 @@
                         <outlet property="miActivityIndicator" destination="oeR-Uw-vqR" id="6ra-FJ-nIU"/>
                         <outlet property="miAddBoton" destination="AwJ-lP-2Dc" id="ADC-ea-Uwz"/>
                         <outlet property="miMapView" destination="XWU-vK-WR8" id="OL0-Ve-Gzh"/>
+                        <segue destination="AYs-2f-rpS" kind="presentation" identifier="showPinImage" id="eRE-n6-WwO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -239,7 +279,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wOj-cG-5AH" id="6j1-Or-TCP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -435,7 +475,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dJL-ir-Ws3" id="pJd-50-G1M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -525,7 +565,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MA4-4E-981" id="5qY-w7-flU">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -565,6 +605,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roG-9U-k2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="334" y="1575"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bby-3v-ZqL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AYs-2f-rpS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y9y-4c-ATc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Snn-A6-VY1" kind="relationship" relationship="rootViewController" id="Mld-yQ-7E1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUo-c7-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493.60000000000002" y="-617.54122938530736"/>
         </scene>
     </scenes>
     <resources>
